@@ -43,7 +43,7 @@ export default function Map() {
         ({ sourceLat, sourceLong, destLat, destLong, color }, i) => {
           console.log('reaching here')
           const pathOptions = getPathOptions(color, i * 3000)
-          L.smoothGeodesic(
+          L?.smoothGeodesic(
             [sourceLat, sourceLong],
             [destLat, destLong],
             5,
@@ -52,7 +52,7 @@ export default function Map() {
         }
       )
     }
-  }, [])
+  }, [map])
   if (typeof window !== undefined) {
     return (
       <MapContainer

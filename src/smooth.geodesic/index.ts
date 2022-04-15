@@ -8,8 +8,7 @@ import {
   SmoothGeodesicSVGCommand
 } from '../../typings/smooth.geodesic'
 
-if (typeof window.L !== undefined) {
-  L.SmoothGeodesic = L.Path.extend({
+  L.SmoothGeodesic = L.Path?.extend({
     options: {},
 
     initialize: function (
@@ -316,4 +315,3 @@ if (typeof window.L !== undefined) {
       options || {}
     )
   }
-}

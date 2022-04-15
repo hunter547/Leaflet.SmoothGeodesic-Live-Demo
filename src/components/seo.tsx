@@ -58,6 +58,10 @@ function Seo({
           content: title
         },
         {
+          property: `og:image`,
+          content: `https://leaflet-smoothgeodesic.netlify.com/ogImage.png`
+        },
+        {
           property: `og:description`,
           content: metaDescription
         },

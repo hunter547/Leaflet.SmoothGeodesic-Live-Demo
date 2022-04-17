@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .layout__wrapper {
   display: flex;
   flex-flow: column;
@@ -5,6 +7,7 @@
   .layout__header,
   .layout__footer {
     flex: 0 1 auto;
+    background-color: $dark-blue;
   }
   .layout__content {
     flex: 1 1 auto;
@@ -47,12 +50,10 @@ aside,
 details,
 figcaption,
 figure,
-footer,
 header,
 main,
 menu,
 nav,
-section,
 summary {
   display: block;
 }
@@ -420,7 +421,7 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin: 1rem 0;
 }
 pre {
   margin-left: 0;

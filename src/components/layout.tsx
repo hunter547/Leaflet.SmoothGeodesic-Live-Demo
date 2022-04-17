@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 import '../styles/layout.scss'
+import Footer from './footer'
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const data = useStaticQuery(graphql`
@@ -27,18 +28,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <div className="layout__wrapper">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main className="layout__content">{children}</main>
-      {/* <footer
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`
-        }}
-        className="layout__footer"
-      >
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer> */}
+      <Footer />
     </div>
   )
 }

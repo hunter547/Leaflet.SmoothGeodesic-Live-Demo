@@ -41,7 +41,6 @@ export default function Map() {
       ]
       sourceToDestandColorArray.forEach(
         ({ sourceLat, sourceLong, destLat, destLong, color }, i) => {
-          console.log('reaching here')
           const pathOptions = getPathOptions(color, i * 3000)
           L?.smoothGeodesic(
             [sourceLat, sourceLong],

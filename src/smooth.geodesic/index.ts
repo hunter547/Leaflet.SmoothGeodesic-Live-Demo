@@ -112,7 +112,6 @@ import {
     },
 
     _setPath: function (path: SmoothGeodesicPathData) {
-      console.log(path)
       this._pathData = path
       this._bounds = this._computeBounds()
     },
@@ -153,7 +152,6 @@ import {
           bound.extend(coord as LatLngExpression)
         }
       }
-      console.log(bound)
       return bound
     },
 
@@ -252,7 +250,6 @@ import {
           }
         }
       }
-      console.log(str)
       return str || 'M0 0'
     },
 
@@ -283,7 +280,6 @@ import {
 
     // SVG specific logic
     _updateCurveSvg: function () {
-      console.log(this._points)
       this._renderer._setPath(this, this._curvePointsToPath(this._points))
 
       if (this.options.animate) {

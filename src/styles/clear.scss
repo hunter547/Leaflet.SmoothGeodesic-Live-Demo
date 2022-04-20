@@ -1,0 +1,14 @@
+@import './variables.scss';
+
+.clear__wrapper {
+  position: absolute;
+  left: 3.375rem;
+  top: 0.625rem;
+  z-index: 1001;
+  background-color: $dark-blue;
+  color: $white;
+  border-radius: 0.25rem;
+  font-family: inherit;
+  border-width: 0;
+  padding: 0.3125rem 0.5rem 0.35rem;
+}

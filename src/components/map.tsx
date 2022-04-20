@@ -4,6 +4,7 @@ import { getPathOptions } from '../utils'
 import '../styles/map.scss'
 import L from 'leaflet'
 import '../smooth.geodesic'
+import Clear from './clear'
 export default function Map() {
   const [map, setMap] = useState<L.Map | undefined>()
 
@@ -54,17 +55,20 @@ export default function Map() {
   }, [map])
   if (typeof window !== undefined) {
     return (
-      <MapContainer
-        className="map__wrapper"
-        center={[0, 0]}
-        zoom={2}
-        whenCreated={(map: L.Map | undefined) => setMap(map)}
-      >
-        <TileLayer
-          url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png"
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-        />
-      </MapContainer>
+      <>
+        <MapContainer
+          className="map__wrapper"
+          center={[0, 0]}
+          zoom={2}
+          whenCreated={(map: L.Map | undefined) => setMap(map)}
+        >
+          <TileLayer
+            url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png"
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+          />
+        </MapContainer>
+        <Clear map={map} />
+      </>
     )
   }
   return null

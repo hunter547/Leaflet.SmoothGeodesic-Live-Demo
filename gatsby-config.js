@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Leaflet.SmoothGeodesic Demo`,
+    title: `🌎 Leaflet.SmoothGeodesic`,
     description: `Demo site to show off the Leaflet.SmoothGeodesic npm package`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`

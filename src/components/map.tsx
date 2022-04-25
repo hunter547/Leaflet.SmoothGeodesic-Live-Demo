@@ -3,7 +3,7 @@ import { MapContainer, TileLayer } from 'react-leaflet'
 import { getPathOptions } from '../utils'
 import '../styles/map.scss'
 import L from 'leaflet'
-import '../smooth.geodesic'
+import 'leaflet.smoothgeodesic'
 import Clear from './clear'
 export default function Map() {
   const [map, setMap] = useState<L.Map | undefined>()
@@ -43,10 +43,10 @@ export default function Map() {
       sourceToDestandColorArray.forEach(
         ({ sourceLat, sourceLong, destLat, destLong, color }, i) => {
           const pathOptions = getPathOptions(color, i * 3000)
-          L?.smoothGeodesic(
+          L.smoothGeodesic(
             [sourceLat, sourceLong],
             [destLat, destLong],
-            5,
+            65,
             pathOptions
           ).addTo(map)
         }

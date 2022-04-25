@@ -29,7 +29,6 @@ function Seo({
       query {
         site {
           siteMetadata {
-            title
             description
             author
           }
@@ -39,7 +38,6 @@ function Seo({
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
 
   return (
     <Helmet
@@ -47,7 +45,7 @@ function Seo({
         lang
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : undefined}
+      titleTemplate="Leaflet.SmoothGeodesic"
       meta={[
         {
           name: `description`,

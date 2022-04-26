@@ -46,7 +46,7 @@ export default function Map() {
           L.smoothGeodesic(
             [sourceLat, sourceLong],
             [destLat, destLong],
-            100,
+            65,
             pathOptions
           ).addTo(map)
         }
